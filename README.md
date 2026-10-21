@@ -1,5 +1,3 @@
-# EV-Challenge-Arquitetura-04
-
 # GoodWe Smart Charging Station – Sprint 4
 
 Solução final da disciplina de **Arquitetura de Computadores** (FIAP – Ciência da Computação, turma 1CCPY).
