@@ -1,0 +1,463 @@
+{
+  "version": 1,
+  "author": "Grupo 1CCPY - FIAP",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {
+        "env": "micropython-20231227-v1.22.0"
+      }
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd",
+      "top": -230,
+      "left": -60,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot",
+      "top": 230,
+      "left": -170,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_cenario",
+      "top": 250,
+      "left": -20,
+      "attrs": {
+        "color": "blue",
+        "label": "CENARIO"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_tela",
+      "top": 250,
+      "left": 110,
+      "attrs": {
+        "color": "green",
+        "label": "TELA"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_ev1_green",
+      "top": -10,
+      "left": 180,
+      "attrs": {
+        "color": "green",
+        "label": ""
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_ev1_green",
+      "top": 90,
+      "left": 155,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_ev1_yellow",
+      "top": -10,
+      "left": 220,
+      "attrs": {
+        "color": "yellow",
+        "label": "EV1"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_ev1_yellow",
+      "top": 90,
+      "left": 195,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_ev1_red",
+      "top": -10,
+      "left": 260,
+      "attrs": {
+        "color": "red",
+        "label": ""
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_ev1_red",
+      "top": 90,
+      "left": 235,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_ev2_green",
+      "top": -10,
+      "left": 330,
+      "attrs": {
+        "color": "green",
+        "label": ""
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_ev2_green",
+      "top": 90,
+      "left": 305,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_ev2_yellow",
+      "top": -10,
+      "left": 370,
+      "attrs": {
+        "color": "yellow",
+        "label": "EV2"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_ev2_yellow",
+      "top": 90,
+      "left": 345,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_ev2_red",
+      "top": -10,
+      "left": 410,
+      "attrs": {
+        "color": "red",
+        "label": ""
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_ev2_red",
+      "top": 90,
+      "left": 385,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_ev3_green",
+      "top": -10,
+      "left": 480,
+      "attrs": {
+        "color": "green",
+        "label": ""
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_ev3_green",
+      "top": 90,
+      "left": 455,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_ev3_yellow",
+      "top": -10,
+      "left": 520,
+      "attrs": {
+        "color": "yellow",
+        "label": "EV3"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_ev3_yellow",
+      "top": 90,
+      "left": 495,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_ev3_red",
+      "top": -10,
+      "left": 560,
+      "attrs": {
+        "color": "red",
+        "label": ""
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_ev3_red",
+      "top": 90,
+      "left": 535,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "lcd:GND",
+      "pico:GND.1",
+      "black",
+      []
+    ],
+    [
+      "lcd:VCC",
+      "pico:VBUS",
+      "red",
+      []
+    ],
+    [
+      "lcd:SDA",
+      "pico:GP0",
+      "blue",
+      []
+    ],
+    [
+      "lcd:SCL",
+      "pico:GP1",
+      "purple",
+      []
+    ],
+    [
+      "pot:VCC",
+      "pico:3V3",
+      "red",
+      []
+    ],
+    [
+      "pot:GND",
+      "pico:GND.6",
+      "black",
+      []
+    ],
+    [
+      "pot:SIG",
+      "pico:GP26",
+      "orange",
+      []
+    ],
+    [
+      "btn_cenario:1.l",
+      "pico:GP16",
+      "blue",
+      []
+    ],
+    [
+      "btn_cenario:2.l",
+      "pico:GND.5",
+      "black",
+      []
+    ],
+    [
+      "btn_tela:1.l",
+      "pico:GP17",
+      "green",
+      []
+    ],
+    [
+      "btn_tela:2.l",
+      "pico:GND.5",
+      "black",
+      []
+    ],
+    [
+      "pico:GP2",
+      "r_ev1_green:2",
+      "green",
+      []
+    ],
+    [
+      "r_ev1_green:1",
+      "led_ev1_green:A",
+      "green",
+      []
+    ],
+    [
+      "led_ev1_green:C",
+      "pico:GND.2",
+      "black",
+      []
+    ],
+    [
+      "pico:GP3",
+      "r_ev1_yellow:2",
+      "yellow",
+      []
+    ],
+    [
+      "r_ev1_yellow:1",
+      "led_ev1_yellow:A",
+      "yellow",
+      []
+    ],
+    [
+      "led_ev1_yellow:C",
+      "pico:GND.2",
+      "black",
+      []
+    ],
+    [
+      "pico:GP4",
+      "r_ev1_red:2",
+      "red",
+      []
+    ],
+    [
+      "r_ev1_red:1",
+      "led_ev1_red:A",
+      "red",
+      []
+    ],
+    [
+      "led_ev1_red:C",
+      "pico:GND.2",
+      "black",
+      []
+    ],
+    [
+      "pico:GP6",
+      "r_ev2_green:2",
+      "green",
+      []
+    ],
+    [
+      "r_ev2_green:1",
+      "led_ev2_green:A",
+      "green",
+      []
+    ],
+    [
+      "led_ev2_green:C",
+      "pico:GND.3",
+      "black",
+      []
+    ],
+    [
+      "pico:GP7",
+      "r_ev2_yellow:2",
+      "yellow",
+      []
+    ],
+    [
+      "r_ev2_yellow:1",
+      "led_ev2_yellow:A",
+      "yellow",
+      []
+    ],
+    [
+      "led_ev2_yellow:C",
+      "pico:GND.3",
+      "black",
+      []
+    ],
+    [
+      "pico:GP8",
+      "r_ev2_red:2",
+      "red",
+      []
+    ],
+    [
+      "r_ev2_red:1",
+      "led_ev2_red:A",
+      "red",
+      []
+    ],
+    [
+      "led_ev2_red:C",
+      "pico:GND.3",
+      "black",
+      []
+    ],
+    [
+      "pico:GP10",
+      "r_ev3_green:2",
+      "green",
+      []
+    ],
+    [
+      "r_ev3_green:1",
+      "led_ev3_green:A",
+      "green",
+      []
+    ],
+    [
+      "led_ev3_green:C",
+      "pico:GND.4",
+      "black",
+      []
+    ],
+    [
+      "pico:GP11",
+      "r_ev3_yellow:2",
+      "yellow",
+      []
+    ],
+    [
+      "r_ev3_yellow:1",
+      "led_ev3_yellow:A",
+      "yellow",
+      []
+    ],
+    [
+      "led_ev3_yellow:C",
+      "pico:GND.4",
+      "black",
+      []
+    ],
+    [
+      "pico:GP12",
+      "r_ev3_red:2",
+      "red",
+      []
+    ],
+    [
+      "r_ev3_red:1",
+      "led_ev3_red:A",
+      "red",
+      []
+    ],
+    [
+      "led_ev3_red:C",
+      "pico:GND.4",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
