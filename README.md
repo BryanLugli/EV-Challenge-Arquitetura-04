@@ -3,6 +3,9 @@
 Solução final da disciplina de **Arquitetura de Computadores** (FIAP – Ciência da Computação, turma 1CCPY).
 Estação inteligente de recarga simulada no **Wokwi**, com **Raspberry Pi Pico** e **MicroPython**, que gerencia uma quantidade limitada de energia entre **3 veículos elétricos** conectados ao mesmo tempo. Inspirada no conceito do **GoodWe Smart Energy Controller**.
 
+🔗 **Simulação no Wokwi:** https://wokwi.com/projects/478532801179265025  
+🎥 **Vídeo de demonstração:** _(link do YouTube será adicionado)_
+
 ## Estrutura do repositório
 
 | Arquivo | Função |
@@ -125,7 +128,7 @@ O controlador da GoodWe monitora a energia disponível (rede, solar, bateria) e 
 
 ## Como executar
 
-1. Abra o projeto no Wokwi (link do grupo) ou crie um projeto "Raspberry Pi Pico – MicroPython".
+1. Abra o [projeto no Wokwi](https://wokwi.com/projects/478532801179265025) ou crie um projeto "Raspberry Pi Pico – MicroPython".
 2. Substitua o `diagram.json` e adicione `main.py`, `gerenciador.py` e `lcd_i2c.py`.
 3. Clique em **Start Simulation**.
 4. Botão azul troca o cenário (reinicia as baterias); botão verde troca a tela; no modo MANUAL gire o potenciômetro.
